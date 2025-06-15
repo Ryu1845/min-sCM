@@ -18,3 +18,12 @@ This repo also implements flash attention jvp which you might want to use.
 sCD 2-step sampling
 
 ![sCD on cifar10 final sample](./contents/scd_sample_99.png)
+
+## Usage
+
+```bash
+uv venv
+uv pip install wandb torch torchvision
+uv run python trigflow.py --cifar # --cifar to use cifar10, uses mnist by default
+uv run python scm.py --teacher_path contents/trigflow_mnist_final.pt --cifar
+```
